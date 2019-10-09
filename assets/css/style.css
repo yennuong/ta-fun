@@ -1,7 +1,11 @@
 /* reset */
-body {
-  word-wrap: break-word;
-  word-break: keep-all;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
 }
 
 body {
@@ -24,6 +28,7 @@ a {
 
 img {
   max-width: 100%;
+  height: auto;
 }
 
 /* color */
@@ -184,6 +189,9 @@ section.tab1 {
   cursor: pointer;
   position: relative;
 }
+.list_tab .left {
+  padding-right: 30px;
+}
 .list_tab .right {
   position: absolute;
   top: 17px;
@@ -284,6 +292,10 @@ section.tab1 {
   }
 }
 @media screen and (max-width: 767px) {
+  section {
+    max-width: 92%;
+  }
+
   nav ul li {
     padding: 0 10px;
     font-size: 15px;
@@ -307,6 +319,24 @@ section.tab1 {
   nav ul li {
     height: 50px;
     line-height: 50px;
+  }
+
+  .recruitment-guide ul {
+    margin: 0 -5px;
+  }
+  .recruitment-guide ul li {
+    padding: 0 5px;
+  }
+}
+@media screen and (max-width: 480px) {
+  nav ul li {
+    padding: 0 5px;
+  }
+
+  .recruitment-guide .box-button a {
+    width: 100%;
+    background-size: contain;
+    background-position: center;
   }
 }
 @media screen and (max-width: 340px) {
