@@ -1,4 +1,5 @@
 /* reset */
+@import "_font";
 * {
   margin: 0;
   padding: 0;
@@ -33,16 +34,25 @@ $color-black: #000;
 $color-pink: #ffefef;
 /* end color */
 /*typography*/
-@font-face {
-  font-family: 'open_sansbold';
-  src: url('../font/opensans-bold-webfont.eot');
-  src: url('../font/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'),
-  url('../font/opensans-bold-webfont.woff') format('woff'),
-  url('../font/opensans-bold-webfont.ttf') format('truetype'),
-  url('../font/opensans-bold-webfont.svg#open_sansbold') format('svg');
-  font-weight: normal;
-  font-style: normal;
+@mixin NotoSansCJKkr-Thin{
+  font-weight: 300;
 }
+@mixin NotoSansCJKkr-Regular{
+  font-weight: 400;
+}
+@mixin NotoSansCJKkr-Medium{
+  font-weight: 500;
+}
+@mixin NotoSansCJKkr-Bold{
+  font-weight: 700;
+}
+body{
+  font-family: 'Noto Sans KR', sans-serif;
+  @include NotoSansCJKkr-Thin;
+  font-size: 13px;
+  color: $color-black;
+}
+
 /*typography*/
 /* header */
 
@@ -72,7 +82,7 @@ header .wrapper {
 .logo{
   position: absolute;
   top: 20px;
-  left: 0;
+  left: 20px;
   margin: 0;
   padding: 0;
 }
@@ -82,6 +92,7 @@ nav{
     margin: 0 auto;
     text-align: center;
     li{
+      @include NotoSansCJKkr-Medium;
       display: inline-block;
       height: 82px;
       line-height: 82px;
@@ -90,7 +101,9 @@ nav{
       font-size: 20px;
       color: $color-gray;
       cursor: pointer;
+
       &.active{
+        @include NotoSansCJKkr-Bold;
         color: $color-green;
         span:after{
           display: block;
@@ -124,12 +137,13 @@ nav{
     text-align: center;
   }
   .block-title{
-    margin: 94px 0 59px;
+    margin: 94px 0 56px;
   }
 }
 .history{
   position: relative;
   background: url("../images/r.png") top right no-repeat;
+  padding-top: 80px;
   &:after{
     content: "";
     background: url(../images/l.png) bottom left no-repeat;
@@ -146,7 +160,7 @@ nav{
     vertical-align: middle;
   }
   .block-left{
-    width: 30%;
+    width: 35%;
     text-align: right;
   }
   .block-right{
@@ -155,14 +169,42 @@ nav{
     li{
       >div{
         display: inline-block;
+        vertical-align: top;
         &:first-child{
-          width: 9%;
+          width: 40px;
+          position: relative;
+          top: 5px;
         }
         &:last-child{
-          width: 90%;
+          width: calc(100% - 45px);
+          padding-left: 15px;
+          font-size: 15px;
+          letter-spacing: 0.45px;
         }
       }
     }
+  }
+  .year{
+    img{
+      width: auto;
+    }
+  }
+  .content{
+    p{
+      margin-bottom: 8px;
+    }
+    .block{
+      margin-bottom: 45px;
+    }
+  }
+  .item-2017{
+    margin-bottom: 30px;
+  }
+  .item-2018{
+    margin-bottom: 69px;
+  }
+  .item-2019{
+    margin-bottom: 40px;
   }
 }
 section{
@@ -180,7 +222,7 @@ section{
 .recruitment,
 .department{
   .block-title{
-    margin: 89px 0 158px;
+    margin: 98px 0 137px;
   }
 }
 .block-title{
@@ -193,16 +235,17 @@ section{
 }
 .list_tab{
   width: 100%;
-  padding: 15px 32px;
+  padding: 15px 43px;
   line-height: 1.5em;
-
-  font-size: 15px;
   transform: rotate(0.03deg);
   box-sizing: border-box;
   cursor: pointer;
   position: relative;
   .left{
     padding-right: 30px;
+    letter-spacing: 0.15px;
+    font-size: 15px;
+    @include NotoSansCJKkr-Regular;
   }
   .right{
     position: absolute;
@@ -213,8 +256,15 @@ section{
 .hidden_slide{
   display: none;
   width: 100%;
-  padding: 20px 32px;
+  padding: 5px 43px 200px;
   line-height: 1.5em;
+  font-size: 13px;
+  p{
+    margin-bottom: 20px;
+    span{
+      display: block;
+    }
+  }
 }
 .left{
   .label{
@@ -229,11 +279,22 @@ section{
   margin-top: 52px;
   padding: 171px 0 68px;
   >div{
-    max-width: 413px;
+    max-width: 407px;
     margin: 0 auto;
   }
   .box-logo{
-    padding: 0 0 43px;
+    padding: 0 0 35px;
+  }
+  .box-content{
+    font-size: 15px;
+    letter-spacing: 0.3px;
+    h4{
+      @include NotoSansCJKkr-Regular;
+      margin-bottom: 38px;
+    }
+    p{
+      margin-bottom: 20px;
+    }
   }
 }
 .recruitment-guide{
@@ -253,9 +314,10 @@ section{
     }
   }
   .box-button{
-    margin: 118px 0 90px;
+    margin: 118px 0 73px;
     text-align: center;
     a{
+      @include NotoSansCJKkr-Regular;
       display: inline-block;
       background: url('../images/button.png') no-repeat;
       width: 339px;
@@ -263,31 +325,47 @@ section{
       line-height: 69px;
       text-align: center;
       color: $color-white;
+      letter-spacing: 0.36px;
+      font-size: 18px;
     }
   }
   .block-info{
     padding-bottom: 96px;
     border-bottom: 1px solid #b68e4c;
+    font-size: 20px;
+    letter-spacing: 0.4px;
+    .title{
+      margin-bottom: 43px;
+      @include NotoSansCJKkr-Regular;
+    }
+    p{
+      margin-bottom: 20px;
+      &:last-of-type{
+        margin-bottom: 0;
+      }
+    }
   }
 }
 .faq{
   h5{
+    @include NotoSansCJKkr-Regular;
+    letter-spacing: 0.4px;
     font-size: 20px;
     text-align: center;
-    padding: 109px 0 81px;
+    padding: 102px 0 62px;
   }
 }
 .recruitment{
   .left{
     .title{
-      padding: 0 10px 0 50px;
+      padding: 0 10px 0 72px;
     }
   }
   .hidden_slide{
-    padding: 20px 82px;
+    padding: 5px 80px 200px 104px;
   }
 }
-@media screen and (max-width: 1024px) and (min-width: 768px){
+@media screen and (max-width: 1023px) and (min-width: 768px){
   nav ul{
     max-width: 70%;
     li{
@@ -306,6 +384,9 @@ section{
     }
     .block-right{
       padding-left: 50px;
+      li > div:first-child{
+        top: 2px;
+      }
     }
   }
 }
@@ -319,6 +400,25 @@ section{
   }
   .logo{
     left: 15px;
+  }
+  .history{
+    .block-left{
+      width: 30%;
+    }
+    .block-right{
+      width: 68%;
+      padding-left: 50px;
+    }
+    background-size: 50%;
+    &:after{
+      background-size: 50%;
+    }
+  }
+  .list_tab{
+    padding: 15px 20px;
+  }
+  .hidden_slide{
+    padding: 5px 20px 100px;
   }
 }
 @media screen and (max-width: 640px){
@@ -340,15 +440,44 @@ section{
       padding: 0 5px;
     }
   }
+  .history{
+    >div{
+      vertical-align: top;
+    }
+    .block-left{
+      width: 135px;
+    }
+    .block-right{
+      width: calc(100% - 140px);
+      padding-left: 20px;
+    }
+  }
 }
 @media screen and (max-width: 480px){
-  nav ul li{
-    padding: 0 5px;
-  }
   .recruitment-guide .box-button a{
     width: 100%;
     background-size: contain;
     background-position: center;
+  }
+  .history{
+    >div{
+      vertical-align: top;
+      width: 100%!important;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    .block-left{
+      text-align: left;
+      margin-bottom: 20px;
+    }
+  }
+  .recruitment{
+    .left .title {
+      padding: 0 10px 0 50px;
+    }
+    .hidden_slide{
+      padding: 5px 80px 100px 70px;
+    }
   }
 }
 @media screen and (max-width: 340px){

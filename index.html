@@ -49,7 +49,7 @@
                </div>
                 <div class="block-right">
                     <ul>
-                        <li>
+                        <li class="item item-2017">
                             <div class="year">
                                 <img src="assets/images/2017.png" alt="2017" width="" height="" />
                             </div>
@@ -59,7 +59,7 @@
                                 </p>
                             </div>
                         </li>
-                        <li>
+                        <li class="item item-2018">
                             <div class="year">
                                 <img src="assets/images/2018.png" alt="2017" width="" height="" />
                             </div>
@@ -74,24 +74,31 @@
                                 <p>- 11월 누적 대출 200억 돌</p>
                             </div>
                         </li>
-                        <li>
+                        <li class="item item-2019">
                             <div class="year">
                                 <img src="assets/images/2019.png" alt="2017" width="" height="" />
                             </div>
                             <div class="content">
-                                <p>
-                                    - 정보 통신 산업 진흥원 (NIPA) 호치민 IT 지원센터 입주사 선정
+                                <div class="block">
+                                    <p>
+                                        - 정보 통신 산업 진흥원 (NIPA) 호치민 IT 지원센터 입주사 선정
 
+                                    </p>
+                                    <p>- 누적대출 400억원 돌파</p>
+                                    <p>- 베트남 호치민 “SNAAP” 중고 물품 거래 플랫폼 런칭</p>
+                                    <p>- 벤처투자그룹 FiveT Capital Group “Synthetic Advisors”와 협약</p>
+                                    <p>- 선 정산 (팩토링 금융) 서비스 런칭 준비</p>
+                                </div>
+                                <div class="block">
+                                    <p>
+                                        - 누적대출액: 427억원
 
-                                    - 벤처투자그룹 FiveT Capital Group “Synthetic Advisors”와 협약
-                                    - 선 정산 (팩토링 금융) 서비스 런칭 준비
-
-                                </p>
-                                <p>- - 누적대출 400억원 돌파</p>
-                                <p>- 베트남 호치민 “SNAAP” 중고 물품 거래 플랫폼 런칭</p>
-                                <p>- 서초기술 평가센터 기술 보증</p>
-                                <p>- - 벤처투자그룹 FiveT Capital Group “Synthetic Advisors”와 협약</p>
-                                <p>- 선 정산 (팩토링 금융) 서비스 런칭 준비</p>
+                                    </p>
+                                    <p>- 연체율: 0%</p>
+                                    <p>- 편균수익률: 13.81%</p>
+                                    <p>- [P2P 금융 가이드 라인 준수 기업]</p>
+                                    <p>- 분리보관 계좌 연동 (웰컴저축은행)</p>
+                                </div>
                             </div>
                         </li>
                     </ul>
@@ -115,11 +122,13 @@
             <div class="box-content">
                 <h4>세상을 연결하는 금융플랫폼</h4>
                 <p>P2P금융 서비스를 시작한 타펀은 기존 금융기관들과 경쟁하기보다는 타펀만의 독자적인 투자 상품과 역할에
-                    관심을 갖고 노력하고 있으며,
+                    관심을 갖고 노력하고 있으며,<br/>
                     다양한 금융 수요에 대한 효율적인 서비스를 제공하고 있습니다.
                 </p>
-                <p>앞으로의 타펀과 함께
-                    미래를 만들어나갈 <span>새로운 인재</span>를 찾습니다.</p>
+                <p>
+                    앞으로의 타펀과 함께<br/>
+
+                    미래를 만들어나갈 새로운 인재를 찾습니다.</p>
 
             </div>
         </article>
@@ -268,7 +277,7 @@
                     </div>
                     <div class="hidden_slide">
                         <p>
-                            담당업무
+                            <span>담당업무</span>
                             - 투자 상품 기획 및 운영 기획 전반
                         </p>
                         <p>
@@ -378,6 +387,12 @@
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/theme.js"></script>
     <script>
+        function setCookie(name, value) {
+            var date = new Date();
+            date.setTime(date.getTime() + 5*60*1000);
+            document.cookie = name + '=' + value + ';expires=' + date.toUTCString() + ';path=/';
+        }
+
         function getCookie(name) {
             var value = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
             return value? value[2] : null;
