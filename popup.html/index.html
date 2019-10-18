@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TA-FUN</title>
+    <style>
+        @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+        *, *:before, *:after {
+            box-sizing: border-box;
+        }
+        .pos-places{
+            position: relative;
+            /* left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7); */
+        }
+        .pos-places .block-popup{
+            position: absolute;
+            top: 100px;
+            left: 50%;
+            -moz-transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+        }
+        .block-popup{
+            box-shadow: 0px 2px 10px 0 rgba(85, 85, 85, 0.59);
+            background-color: #e6e6e6;
+            width: 578px;
+            margin: 0 auto;
+            font-family: "Noto Sans KR", sans-serif;
+        }
+        .block-popup .popup-header{
+            background-color: #fff;
+            height: 123px;
+            text-align: center;
+            padding: 17px 20px;
+            position: relative;
+        }
+        .block-popup .popup-header .close-popup{
+            position: absolute;
+            right: 15px;
+            top: 15px;
+        }
+        .block-popup .popup-header h3{
+            font-size: 17px;
+            line-height: 1.32;
+            letter-spacing: 0.26px;
+            color: #222222;
+            margin: 13px 0 0;
+            font-weight: 400;
+        }
+        .block-popup .popup-content{
+            font-size: 14.5px;
+            line-height: 22.5px;
+            letter-spacing: 0.29px;
+            padding: 26px 32px 0;
+            font-weight: 300;
+        }
+        .block-popup .popup-content p{
+            margin: 0 0 30px;
+        }
+        .block-popup .popup-content ul{
+            list-style: none;
+            padding: 0;
+        }
+        .block-popup .popup-content .list-type-number{
+            margin: 0 0 40px;
+        }
+        .block-popup .popup-content .list-type-number-2 .title span{
+            color: #cc0000;
+            margin-bottom: 30px;
+            display: block;
+        }
+        .block-popup .popup-content .title ul li{
+            padding-bottom: 30px;
+        }
+        .block-popup .popup-content .title ul li.gray{
+            color: #c3c3c3
+        }
+        @media screen and (max-width: 640px) {
+            .block-popup{
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="pos-places">
+        <div class="block-popup">
+            <div class="popup-header">
+                <img src="icon.png" alt="가상계좌 입금이 안되시나요?" width="" height=""/>
+                <h3>가상계좌 입금이 안되시나요?</h3>
+                <div class="close-popup">
+                    <img src="x.png" alt="가상계좌 입금이 안되시나요?" width="" height=""/>
+                </div>
+            </div>
+            <div class="popup-content">
+                <p>
+                        가상계좌에 예치금 입금 시, <출금계좌로 등록하신 계좌>에서만 이체가 가능합니다. 
+                        등록된 출금계좌의 어플리케이션 또는 인터넷 뱅킹을 통해서만 예치금 입금이 가능합니다.
+                </p>
+                <ul class="list-type-number">
+                    <li>1. 등록하신 출금계좌가 아닌 타계좌에서의 송금</li>
+                    <li>2. 송금어플 (토스, 카카오페이, 네이버페이 등)</li>
+                    <li>3. ATM기기 (은행창구 이용은 가능)</li>
+                    <li>에서는 입금이 불가합니다. </li>
+                </ul>
+                <p>그래도 입금이 안되시나요?</p>
+                <ul class="list-type-number-2" >
+                    <li class="title">
+                        <span>1.신한은행으로 출금계좌를 등록해주신 고객 님들께 안내 드립니다.</span>
+                        <ul>
+                            <li>
+                                신한은행 등록 후 예치금 충전이 불가하신 경우, <br />
+                                회원님의 계좌번호가 신 계좌와 구 계좌 중 <br />
+                                구 계좌(11자리 계좌번호)를 등록하여 해당 오류가 발생할 수 있습니다.<br />
+                                신 계좌정보를 파악하시고 등록하여 사용하실 수 있도록 요청드립니다.</li>
+                        </ul>
+                    </li>
+                    <li class="title">
+                        <span>2. 증권사 계좌를 출금계좌 등록해주신 고객 님들께 안내드립니다.</span>
+                        <ul>
+                            <li>
+                                증권사에서 개설된 계좌의 경우 출금계좌로 등록은 가능하나, <br />
+                                실제 계좌 송금이 불가한 경우가 있습니다.<br />
+                                증권사 계좌의 경우 형태가 다양하며 출금계좌로써 이용 가능 여부가 모두 상이합니다.<br />
+                                (CMA 계좌는 이용이 불가합니다)<br />
+                                시중은행권(우리,국민,기업,하나 등등)의 계좌 이용을 권장드립니다.
+                            </li>
+                            <li class="gray">
+                                문제해결에 도움이 되지 않았다면<br />
+                                카카오톡 채널 '타겟펀딩'으로 문의주시길 바랍니다.<br />
+                                카톡채널 '타겟펀딩' 운영시간은 영업일 AM10:00 - PM6:00이며<br />
+                                공휴일 및 담당자 부재로 인한 답변지연이 있을 수 있습니다.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="popup-footer">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
